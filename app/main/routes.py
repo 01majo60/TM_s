@@ -221,7 +221,7 @@ def simulacia(vstup,druh, name):
         elif length == 7:
              z[7] = render_template("simulacia.html",form=form,data1 = input_symbols,dataframe = dfz[0].to_html(),dataframe1 = dfz[1].to_html(), dataframe2= dfz[2].to_html(), dataframe3= dfz[3].to_html(),dataframe4 = dfz[4].to_html(), dataframe5 = dfz[5].to_html(), dataframe6 = dfz[6].to_html(),data = dff)
     else:
-        return render_template("simulacia.html",form=form,data1 = input_symbols,dataframe = df_tape.to_html(classes=["table-bordered", "table-striped", "table-hover"]), data = dff)
+        return render_template("simulacia.html",form=form,data1 = counter.value,dataframe = df_tape.to_html(classes=["table-bordered", "table-striped", "table-hover"]), data = dff)
 
 
 @bp.route('/dtm', methods=['GET', 'POST'])
